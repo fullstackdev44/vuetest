@@ -3,7 +3,7 @@
 # Install dependencies
 $ composer install
 
-Create .env file inside backend folder and update your mysql database configuration (host,username,password and Database Name) into it.
+Rename example.env file to .env inside backend folder and update your mysql database configuration (host,username,password and Database Name) into it.
 
 Create Database from .env file
 
