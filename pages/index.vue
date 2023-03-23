@@ -22,8 +22,8 @@
      <p>family:{{item.family}}<br>
     </p> 
     </b-card-text>
-    <div v-if="item.favorite==0 || item.favorite == null"> <button variant="outline-primary"  v-on:click="greet(item.id)">add favorite</button></div>
-   <div v-else="item.favorite==1">added </div>
+    <div v-if="item.favorite==0 || item.favorite == null"> <button variant="outline-primary"  v-on:click="greet(item.id)">Add to favorite</button></div>
+   <div v-else="item.favorite==1">Added </div>
   </b-card>
 </div>
 </b-row>
