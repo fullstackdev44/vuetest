@@ -43,7 +43,7 @@ $ cd ..
 $ npm install
 
 # Add Backend Url
-Inside env file update your bacnkend url (BASE_URL)
+Inside env file update your backend url (BASE_URL)
 
 # serve with hot reload at localhost:3000
 $ npm run dev
