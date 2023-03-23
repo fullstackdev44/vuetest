@@ -13,7 +13,8 @@
     </p>
     </b-card-text>
     
-    <button variant="outline-primary"  v-on:click="greet(item.id)">remove favorites</button>
+    
+    <b-button variant="outline-primary"  v-on:click="greet(item.id)">remove favorites</b-button>
   </b-card>
 </div>
 </b-row>
