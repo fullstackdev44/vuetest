@@ -1,0 +1,9 @@
+ul.navbar-nav li {
+    margin-right: 10px;
+}
+nav.navbar.navbar-light.bg-light.navbar-expand-sm {
+    margin-bottom: 50px;
+}
+.filter {
+    margin-bottom: 30px;
+}
