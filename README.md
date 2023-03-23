@@ -3,12 +3,12 @@
 # install dependencies
 $ composer install
 
-# Create .env file inside backend folder and update your mysql database configuration (host,username and password) into it.
+Create .env file inside backend folder and update your mysql database configuration (host,username and password) into it.
 
-//Generate the migration
+Generate the migration
 $ php bin/console make:migration
 
-//apply it in the DB
+apply it in the DB
 $ php bin/console doctrine:migrations:migrate
 
 $ symfony server:start
