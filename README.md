@@ -17,6 +17,10 @@ Apply it in the DB
 
 $ php bin/console doctrine:migrations:migrate
 
+Import Fruits into Database
+
+$ php bin/console app:import-fruit
+
 $ symfony server:start
 
 # Configure Frontend (VueJs)
