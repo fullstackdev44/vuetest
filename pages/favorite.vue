@@ -57,7 +57,8 @@ async fetch(){
     
       if (this.dataset != '') {
         let id =this.dataset
-        axios.post(process.env.baseUrl+"/fruits/addfavorites",{id:id,favorite:0})
+     
+        axios.post(process.env.baseUrl+"/fruits/removefavorites",{id:id,favorite:0})
         .then(res=>{
           if(res.data.data == "Done"){
             this.$router.push('/');
