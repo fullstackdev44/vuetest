@@ -8,7 +8,9 @@
     <b-card-text>
      <h3>{{ item.name }}</h3>
      <p>family:{{item.family}}<br>
-    </p> 
+    </p>
+    <p>Total Nutritions : {{ (parseFloat(item.carbohydrates)+parseFloat(item.protein)+parseFloat(item.fat)+parseFloat(item.calories)+parseFloat(item.sugar)).toFixed(2) }}<br>
+    </p>
     </b-card-text>
     
     <button variant="outline-primary"  v-on:click="greet(item.id)">remove favorites</button>
@@ -55,8 +57,13 @@ async fetch(){
       if (this.dataset != '') {
         let id =this.dataset
         axios.post(process.env.baseUrl+"/fruits/addfavorites",{id:id,favorite:0})
-        .then(res=>console.log(res.data))
-        
+        .then(res=>{
+          if(res.data.data == "Done"){
+            this.$router.push('/');
+          }else{
+            this.msg = res.data.data;
+          }
+        })
        
             return tempproduct
         }
