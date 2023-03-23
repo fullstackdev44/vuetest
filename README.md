@@ -1,6 +1,6 @@
 # Configure Backend for Rest Apis (Symphony)
 
-# install dependencies
+# Install dependencies
 $ composer install
 
 Create .env file inside backend folder and update your mysql database configuration (host,username and password) into it.
