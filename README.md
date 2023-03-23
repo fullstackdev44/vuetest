@@ -1,6 +1,15 @@
+# Clone into Local
+
+$ git clone https://github.com/fullstackdev44/vuetest.git
+
+$ cd vuetest
+
 # Configure Backend for Rest Apis (Symphony)
 
+cd backend
+
 # Install dependencies
+
 $ composer install
 
 Rename example.env file to .env inside backend folder and update your mysql database configuration (host,username,password and Database Name) into it.
@@ -24,6 +33,8 @@ $ php bin/console app:import-fruit
 $ symfony server:start
 
 # Configure Frontend (VueJs)
+
+$ cd ..
 
 ## Build Setup
 
