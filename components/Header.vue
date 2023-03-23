@@ -6,8 +6,10 @@
     <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
     <b-collapse id="nav-text-collapse" is-nav>
       <b-navbar-nav>
-        <li><b-nav-text><a href="/"> Home</a></b-nav-text></li>
-        <li><b-nav-text><a href="/favorite"> Favorites</a></b-nav-text></li>
+        <li><b-nav-text><NuxtLink to="/"> Home  </NuxtLink></b-nav-text></li>
+        <li><b-nav-text><NuxtLink to="/favorite"> Favorites</NuxtLink></b-nav-text></li>
+     
+        
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
