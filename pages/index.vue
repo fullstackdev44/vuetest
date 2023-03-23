@@ -27,10 +27,10 @@
   </b-card>
 </div>
 </b-row>
-
+ 
 
     </div>
-<vs-pagination :total-pages=totalPagesdata  @change="changePage"></vs-pagination>
+    <client-only><vs-pagination :total-pages=totalPagesdata  @change="changePage"></vs-pagination></client-only>
 </div>
 </b-container>
 </template>
