@@ -73,7 +73,7 @@ class FruitsController extends AbstractController
             }
             return $this->json(array("data"=>"Done"));
         }else{
-            return $this->json(array("data"=>"You can only add 10 fruits to your faqvorite list."));
+            return $this->json(array("data"=>"You can only add 10 fruits to your Favorite list."));
         }
         
     }
