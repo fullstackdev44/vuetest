@@ -79,6 +79,36 @@ class FruitsController extends AbstractController
     }
 
     /**
+     * @Route("/fruits/removefavorites", name="app_remove_favorite", methods={"POST"})
+     */
+
+     public function removefavorites(Request $request, MailerInterface $mailer): Response
+     {   
+         $data = json_decode($request->getContent(), true);
+         $id = $data['id'];
+         $favorite = $data['favorite'];
+         $em = $this->getDoctrine()->getManager();
+         $query = $em->createQuery(
+             'SELECT p
+             FROM App\Entity\Fruits p
+             WHERE p.favorite = 1
+             ORDER BY p.id ASC'
+         );
+             $fruits = $em->getRepository(Fruits::class)->find($id);
+             if (!$fruits) {
+                 throw $this->createNotFoundException(
+                     'No fruit found for id '.$id
+                 );
+             }
+             $fruits->setFavorite($favorite);
+             $em->flush();
+ 
+             return $this->json(array("data"=>"Done"));
+         
+         
+     }
+
+    /**
      * @Route("/fruits/getfavorites", name="app_get_favorite", methods={"GET"})
      */
 
